@@ -63,3 +63,7 @@ LIMIT 5;";
 echo "$($PSQL "$QUERY")";
 
 echo -e "\nAverage GPA of all students rounded to two decimal places:";
+QUERY="
+SELECT ROUND(AVG(gpa), 2)
+FROM students;";
+echo "$($PSQL "$QUERY")";
