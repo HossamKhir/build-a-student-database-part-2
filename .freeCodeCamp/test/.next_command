@@ -75,3 +75,6 @@ history -a
 echo $PWD >> ~/project/.freeCodeCamp/test/.cwd
 history -a
 psql students freecodecamp
+echo $PWD >> ~/project/.freeCodeCamp/test/.cwd
+history -a
+psql students freecodecamp
