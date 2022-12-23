@@ -15,3 +15,6 @@ history -a
 chmod +x student_info.sh
 echo $PWD >> ~/project/.freeCodeCamp/test/.cwd
 history -a
+echo '#!/bin/bash' >> student_info.sh
+echo $PWD >> ~/project/.freeCodeCamp/test/.cwd
+history -a
