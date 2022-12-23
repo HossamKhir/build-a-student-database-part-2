@@ -77,3 +77,5 @@ FROM students
 GROUP BY major_id
 HAVING COUNT(*) > 1;";
 echo "$($PSQL "$QUERY")";
+
+echo -e "\nList of majors, in alphabetical order, that either no student is taking or has a student whose first name contains a case insensitive 'ma':";
