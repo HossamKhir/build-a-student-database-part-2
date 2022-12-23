@@ -39,3 +39,13 @@ AND
 echo "$($PSQL "$QUERY")";
 
 echo -e "\nLast name of students whose last name contains a case insensitive 'sa' or have an 'r' as the second to last letter:";
+QUERY="
+SELECT
+  last_name
+FROM
+  students
+WHERE
+  last_name ILIKE '%sa%'
+OR
+  last_name LIKE '%r_';";
+echo "$($PSQL "$QUERY")";
