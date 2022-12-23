@@ -102,3 +102,5 @@ WHERE student_id IS NULL
     )
 ORDER BY course DESC;";
 echo "$($PSQL "$QUERY")";
+
+echo -e "\nList of courses, in alphabetical order, with only one student enrolled:";
