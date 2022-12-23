@@ -13,3 +13,5 @@ FROM
 WHERE
   gpa = 4.0;"
 echo "$($PSQL "$QUERY")"
+
+echo -e "\nAll course names whose first letter is before 'D' in the alphabet:"
