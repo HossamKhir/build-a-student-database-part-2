@@ -15,3 +15,11 @@ WHERE
 echo "$($PSQL "$QUERY")"
 
 echo -e "\nAll course names whose first letter is before 'D' in the alphabet:"
+QUERY="
+SELECT
+  course
+FROM
+  courses
+WHERE
+  course < 'D';"
+echo "$($PSQL "$QUERY")";
