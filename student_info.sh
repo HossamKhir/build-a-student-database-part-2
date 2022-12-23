@@ -79,3 +79,11 @@ HAVING COUNT(*) > 1;";
 echo "$($PSQL "$QUERY")";
 
 echo -e "\nList of majors, in alphabetical order, that either no student is taking or has a student whose first name contains a case insensitive 'ma':";
+QUERY="
+SELECT major
+FROM majors
+    LEFT JOIN students ON majors.major_id = students.major_id
+WHERE student_id IS NULL
+    OR first_name ILIKE '%ma%'
+ORDER BY major;";
+echo -e "$($PSQL "$QUERY")";
