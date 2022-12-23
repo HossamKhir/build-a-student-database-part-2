@@ -36,4 +36,4 @@ AND
   gpa > 3.8
   OR
   gpa < 2.0;"
-echo "$($PSQL "$QUERY")"
+echo "$($PSQL "$QUERY")";
