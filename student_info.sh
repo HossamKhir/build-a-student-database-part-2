@@ -87,3 +87,5 @@ WHERE student_id IS NULL
     OR first_name ILIKE '%ma%'
 ORDER BY major;";
 echo -e "$($PSQL "$QUERY")";
+
+echo -e "\nList of unique courses, in reverse alphabetical order, that no student or 'Obie Hilpert' is taking:";
