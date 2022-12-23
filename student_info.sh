@@ -51,3 +51,5 @@ WHERE major_id IS NULL
         OR gpa > 3.0
     );";
 echo "$($PSQL "$QUERY")";
+
+echo -e "\nCourse name of the first five courses, in reverse alphabetical order, that have an 'e' as the second letter or end with an 's':";
