@@ -104,3 +104,12 @@ ORDER BY course DESC;";
 echo "$($PSQL "$QUERY")";
 
 echo -e "\nList of courses, in alphabetical order, with only one student enrolled:";
+QUERY="SELECT course
+FROM students
+    INNER JOIN majors USING(major_id)
+    INNER JOIN majors_courses USING(major_id)
+    INNER JOIN courses USING(course_id)
+GROUP BY course
+HAVING count(student_id) = 1
+ORDER BY course;";
+echo "$($PSQL "$QUERY")";
