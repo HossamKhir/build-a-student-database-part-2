@@ -9,3 +9,6 @@ history -a
 psql -U postgres < students.sql
 echo $PWD >> ~/project/.freeCodeCamp/test/.cwd
 history -a
+touch student_info.sh
+echo $PWD >> ~/project/.freeCodeCamp/test/.cwd
+history -a
