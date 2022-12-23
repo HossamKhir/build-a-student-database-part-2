@@ -23,3 +23,5 @@ FROM
 WHERE
   course < 'D';"
 echo "$($PSQL "$QUERY")";
+
+echo -e "\nFirst name, last name, and GPA of students whose last name begins with an 'R' or after and have a GPA greater than 3.8 or less than 2.0:";
