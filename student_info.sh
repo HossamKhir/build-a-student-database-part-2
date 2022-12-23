@@ -37,3 +37,5 @@ AND
   OR
   gpa < 2.0;"
 echo "$($PSQL "$QUERY")";
+
+echo -e "\nLast name of students whose last name contains a case insensitive 'sa' or have an 'r' as the second to last letter:"
