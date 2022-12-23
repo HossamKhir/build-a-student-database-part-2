@@ -51,3 +51,14 @@ OR
 echo "$($PSQL "$QUERY")";
 
 echo -e "\nFirst name, last name, and GPA of students who have not selected a major and either their first name begins with 'D' or they have a GPA greater than 3.0:";
+QUERY="
+SELECT first_name,
+    last_name,
+    gpa
+FROM students
+WHERE major_id IS NULL
+    AND (
+        first_name LIKE 'D%'
+        OR gpa > 3.0
+    );";
+echo "$($PSQL "$QUERY")";
