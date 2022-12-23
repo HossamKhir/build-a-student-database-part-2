@@ -4,3 +4,8 @@ echo hello SQL
 echo $PWD >> ~/project/.freeCodeCamp/test/.cwd
 history -a
 psql postgres freecodecamp
+echo $PWD >> ~/project/.freeCodeCamp/test/.cwd
+history -a
+psql -U postgres < students.sql
+echo $PWD >> ~/project/.freeCodeCamp/test/.cwd
+history -a
