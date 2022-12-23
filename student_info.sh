@@ -53,3 +53,11 @@ WHERE major_id IS NULL
 echo "$($PSQL "$QUERY")";
 
 echo -e "\nCourse name of the first five courses, in reverse alphabetical order, that have an 'e' as the second letter or end with an 's':";
+QUERY="
+SELECT course
+FROM courses
+WHERE course LIKE '_e%'
+    OR course LIKE '%s'
+ORDER BY course DESC
+LIMIT 5;";
+echo "$($PSQL "$QUERY")";
