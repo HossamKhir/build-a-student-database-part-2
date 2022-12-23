@@ -61,3 +61,5 @@ WHERE course LIKE '_e%'
 ORDER BY course DESC
 LIMIT 5;";
 echo "$($PSQL "$QUERY")";
+
+echo -e "\nAverage GPA of all students rounded to two decimal places:";
